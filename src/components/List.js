@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 export default function List() {
   const [list, setList] = useState([]);
@@ -21,8 +20,9 @@ export default function List() {
       <ul>
         {list.map((item) => (
           <li>
-            {item.name}
+            {item.num} /{item.name} /
             <img
+              alt="no"
               src={"http://43.200.191.24:8081/read-img/" + item.path}
               className="imgstyle"
             />
